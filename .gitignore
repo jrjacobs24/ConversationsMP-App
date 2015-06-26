@@ -1,0 +1,6 @@
+# gitignore for the Conversations Made Possible app
+
+# Untracked files:
+
+node_modules/**
+bower_components/**

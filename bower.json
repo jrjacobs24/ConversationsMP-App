@@ -1,0 +1,26 @@
+{
+  "name": "conversationsmp",
+  "version": "1.0.0",
+  "authors": [
+    "Jonathon Jacobs <jjacobs@conversationsmp.com>"
+  ],
+  "description": "The Base WordPress theme for the Conversations Made Possible web app.",
+  "keywords": [
+    "WordPress",
+    "Bootstrap",
+    "web",
+    "app"
+  ],
+  "license": "MIT",
+  "homepage": "conversationsapp.dev",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass-official": "~3.3.5"
+  }
+}
