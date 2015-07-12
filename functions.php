@@ -229,6 +229,9 @@ function conversationsmp_scripts() {
 	// Add Genericons, used in the main stylesheet.
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.2' );
 
+	// Add Genericons, used in the main stylesheet.
+	wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.3' );
+
 	// Load our main stylesheet.
 	wp_enqueue_style( 'conversationsmp-style', get_stylesheet_uri() );
 
@@ -250,7 +253,7 @@ function conversationsmp_scripts() {
 		wp_enqueue_script( 'conversationsmp-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20141010' );
 	}
 
-	wp_enqueue_script( 'conversationsmp-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20150330', true );
+	//wp_enqueue_script( 'conversationsmp-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20150330', true );
 	wp_localize_script( 'conversationsmp-script', 'screenReaderText', array(
 		'expand'   => '<span class="screen-reader-text">' . __( 'expand child menu', 'conversationsmp' ) . '</span>',
 		'collapse' => '<span class="screen-reader-text">' . __( 'collapse child menu', 'conversationsmp' ) . '</span>',

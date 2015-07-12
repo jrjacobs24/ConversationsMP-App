@@ -9,15 +9,14 @@
  *
  * Learn more: {@link https://codex.wordpress.org/Template_Hierarchy}
  *
- * @package WordPress
- * @subpackage Conversations_MP
+ * @package Conversations_MP
+ * @version 1.0
  * @since Conversations Made Possible 1.0
  */
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<section id="primary" class="wrapper content-area">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -41,21 +40,13 @@ get_header(); ?>
 			// End the loop.
 			endwhile;
 
-			// Previous/next page navigation.
-			the_posts_pagination( array(
-				'prev_text'          => __( 'Previous page', 'conversationsmp' ),
-				'next_text'          => __( 'Next page', 'conversationsmp' ),
-				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'conversationsmp' ) . ' </span>',
-			) );
+			// If no content, include the "No posts found" template.
+			else :
+				get_template_part( 'content', 'none' );
 
-		// If no content, include the "No posts found" template.
-		else :
-			get_template_part( 'content', 'none' );
+			endif;
+			?>
 
-		endif;
-		?>
-
-		</main><!-- .site-main -->
-	</div><!-- .content-area -->
+	</section> <!-- #primary -->
 
 <?php get_footer(); ?>

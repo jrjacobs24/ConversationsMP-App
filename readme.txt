@@ -1,11 +1,9 @@
 === Conversations Made Possible ===
-Contributors: the WordPress team
+Author: Jonathon Jacobs
 Tags: black, blue, gray, pink, purple, white, yellow, dark, light, two-columns, left-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
 Requires at least: 4.1
 Tested up to: 4.1
 Stable tag: 4.1
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 Our 2015 default theme is clean, blog-focused, and designed for clarity. Conversations Made Possible's simple, straightforward typography is readable on a wide variety of screen sizes, and suitable for multiple languages. We designed it using a mobile-first approach, meaning your content takes center-stage, regardless of whether your visitors arrive by smartphone, tablet, laptop, or desktop computer.

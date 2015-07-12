@@ -1,5 +1,5 @@
 sassFiles = {
-    'style.css': 'scss/app.scss'
+    'css/app.css': 'scss/app.scss'
 }
 
 module.exports = function (grunt) {
@@ -122,5 +122,5 @@ module.exports = function (grunt) {
     // Establish tasks we can run from the terminal.
     grunt.registerTask('build', ['build', 'copy']);
     grunt.registerTask('watch', ['watch']);
-    grunt.registerTask('default', ['sass']);
+    grunt.registerTask('sass', ['sass:dev']);
 }
