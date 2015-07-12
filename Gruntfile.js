@@ -1,5 +1,5 @@
 sassFiles = {
-    'css/app.css': 'scss/app.scss'
+    'style.css': 'scss/app.scss'
 }
 
 module.exports = function (grunt) {
