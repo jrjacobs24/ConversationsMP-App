@@ -1,0 +1,158 @@
+//
+// Sidebar Navigation
+// --------------------------------------------------
+
+#sidebar {
+  width: 210px;
+  height: 100%;
+  position: fixed;
+  background: $brand-primary;
+  h5 {
+    color: $gray-lighter;
+    font-weight: 700;
+  }
+  ul li {
+    position: relative;
+  }
+  .sub-menu > .sub li {
+    padding-left: 32px;
+    &:last-child {
+      padding-bottom: 10px;
+    }
+  }
+}
+
+/*LEFT NAVIGATION ICON*/
+
+.dcjq-icon {
+  height: 17px;
+  width: 17px;
+  display: inline-block;
+  background: url("../img/nav-expand.png") no-repeat top;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  position: absolute;
+  right: 10px;
+  top: 15px;
+}
+
+.active .dcjq-icon {
+  background: url("../img/nav-expand.png") no-repeat bottom;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+/*---*/
+
+.nav-collapse.collapse {
+  display: inline;
+}
+
+ul.sidebar-menu {
+  margin: -2px 0 0;
+  padding: 0;
+  li ul.sub {
+    margin: -2px 0 0;
+    padding: 0;
+  }
+  margin-top: 75px;
+}
+
+#sidebar > ul > li {
+  > ul.sub {
+    display: none;
+  }
+  &.active > ul.sub, > ul.sub > li > a {
+    display: block;
+  }
+}
+
+ul.sidebar-menu li {
+  ul.sub li {
+    background: $brand-light;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    &:last-child {
+      border-radius: 0 0 4px 4px;
+      -webkit-border-radius: 0 0 4px 4px;
+    }
+    a {
+      font-size: 12px;
+      padding: 6px 0;
+      line-height: 35px;
+      height: 35px;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+      color: #aeb2b7;
+      &:hover {
+        color: white;
+        background: transparent;
+      }
+    }
+    &.active a {
+      background-color: $brand-dark;
+      color: $gray-lighter;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+      display: block;
+    }
+  }
+  /*line-height: 20px !important;*/
+  margin-bottom: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  &.sub-menu {
+    line-height: 15px;
+  }
+  a {
+    span {
+      display: inline-block;
+    }
+    color: $gray-lighter;
+    text-decoration: none;
+    display: block;
+    padding: 15px 0 15px 10px;
+    font-size: 12px;
+    outline: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    &.active, &:hover, &:focus {
+      background: $brand-dark;
+      color: $gray-lighter;
+      display: block;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+    }
+    i {
+      font-size: 15px;
+      padding-right: 6px;
+    }
+    &:hover i, &:focus i, &.active i {
+      color: $gray-lighter;
+    }
+  }
+}
+
+.mail-info {
+  margin: -3px 6px 0 0;
+  font-size: 11px;
+  &:hover {
+    margin: -3px 6px 0 0;
+    font-size: 11px;
+  }
+}

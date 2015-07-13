@@ -23,7 +23,7 @@
 
 <body <?php body_class(); ?>>
 
- 	<section id="container" class="hfeed site">
+ 	<section id="container" class="container-fluid no-padding hfeed site">
 
  	<!-- ********************************************************
       TOP BAR CONTENT & NOTIFICATIONS
@@ -185,7 +185,18 @@
 
 		    <div class="top-menu">
 		    	<ul class="nav pull-right top-menu">
-		            <li><a class="logout" href="login.html">Logout</a></li>
+
+		    		<li>
+		    			<span>
+			    			<?php 
+			    			$current_user = wp_get_current_user();
+			    			printf( "Hello, %s ", $current_user->user_firstname );
+			    			?>
+				    		<a href="profile.html">
+								<img src="<?php echo get_template_directory_uri(); ?>/img/ui-sam.jpg" class="img-circle" width="60">
+							</a>
+						</span>
+					</li>
 		    	</ul>
 		    </div>
 	    </header>

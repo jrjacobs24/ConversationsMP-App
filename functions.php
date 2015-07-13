@@ -356,3 +356,7 @@ require get_template_directory() . '/inc/template-tags.php';
  * @since Conversations Made Possible 1.0
  */
 require get_template_directory() . '/inc/customizer.php';
+
+// Register Custom Navigation Walker
+require_once('wp_bootstrap_navwalker.php');
+

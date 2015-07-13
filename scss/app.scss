@@ -6,3 +6,39 @@
 @import "_bootstrap.scss";
 @import "material/material-wfont.scss";
 @import "dashgum";
+
+/* BASIC THEME CONFIGURATION */
+
+body {
+  color: $gray-base;
+  padding: 0px !important;
+  margin: 0px !important;
+  font-size: 13px;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  &:hover, &:focus {
+    text-decoration: none;
+    outline: none;
+  }
+}
+
+::selection, 
+::-moz-selection,
+::-webkit-selection {
+  background: $gray-base;
+  color: #fff;
+}
+
+/* Top Navigation */
+@import "partials/top-nav";
+/* Side Navigation */
+@import "partials/side-nav";
+
+

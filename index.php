@@ -16,7 +16,7 @@
 
 get_header(); ?>
 
-	<section id="primary" class="wrapper content-area">
+	<section id="primary" class="wrapper content-area site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
 

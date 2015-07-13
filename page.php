@@ -13,8 +13,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<section id="primary" class="wrapper content-area site-main" role="main">
 
 		<?php
 		// Start the loop.
@@ -32,7 +31,6 @@ get_header(); ?>
 		endwhile;
 		?>
 
-		</main><!-- .site-main -->
-	</div><!-- .content-area -->
+	</section><!-- #primary -->
 
 <?php get_footer(); ?>

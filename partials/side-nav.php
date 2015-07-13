@@ -21,10 +21,31 @@ if ( ! defined( 'ABSPATH' ) ) {
 <!--sidebar start-->
 <aside>
 	<div id="sidebar"  class="nav-collapse ">
+
+	<?php
+
+	   /**
+		* Displays a navigation menu
+		* @param array $args Arguments
+		*/
+		$args = array(
+			'container' => false,
+			'menu_class' => 'sidebar-menu',
+			'menu_id' => 'nav-accordion',
+			'depth' => 0,
+			'walker' => new wp_bootstrap_navwalker()
+		);
+		wp_nav_menu( $args );
+
+	?>
+
+	<!-- sidebar menu end-->
+	</div>
+	
 		<!-- sidebar menu start-->
-		<ul class="sidebar-menu" id="nav-accordion">
+		<!-- <ul class="sidebar-menu" id="nav-accordion">
 	  
-			<p class="centered"><a href="profile.html"><img src="<?php echo get_template_directory_uri(); ?>/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
+			<p class="centered"><a href="profile.html"><img src="<?php //echo get_template_directory_uri(); ?>/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
 			<h5 class="centered">Marcel Newman</h5>
 				
 			<li class="mt">
@@ -98,7 +119,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</ul>
 			</li>
 	    </ul>
-	    <!-- sidebar menu end-->
-	</div>
+	</div> -->
 </aside>
 <!--sidebar end-->

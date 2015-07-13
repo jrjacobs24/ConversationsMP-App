@@ -122,5 +122,5 @@ module.exports = function (grunt) {
     // Establish tasks we can run from the terminal.
     grunt.registerTask('build', ['build', 'copy']);
     grunt.registerTask('watch', ['watch']);
-    grunt.registerTask('sass', ['sass:dev']);
+    grunt.registerTask('default', ['sass:dev']);
 }
