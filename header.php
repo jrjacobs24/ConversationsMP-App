@@ -47,9 +47,14 @@
 				<ul class="nav top-menu">
 				    <!-- settings start -->
 				    <li class="dropdown">
-				        <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+				        <a data-toggle="dropdown" class="dropdown-toggle" href="
+				        <?php // Redirect
+							echo bp_displayed_user_domain() . bp_get_notifications_slug() . '/unread/' ; 
+						?>">
 				            <i class="fa fa-tasks"></i>
-				            <span class="badge bg-theme">4</span>
+				            <span class="badge bg-theme">
+				            	<?php echo bp_notifications_get_unread_notification_count( bp_loggedin_user_id() ); ?>
+				            </span>
 				        </a>
 				        <ul class="dropdown-menu extended tasks-bar">
 				            <div class="notify-arrow notify-arrow-green"></div>
@@ -116,9 +121,9 @@
 				    <!-- settings end -->
 				    <!-- inbox dropdown start-->
 				    <li id="header_inbox_bar" class="dropdown">
-				        <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+				        <a data-toggle="dropdown" class="dropdown-toggle" href="<?php echo bp_loggedin_user_domain() . bp_get_messages_slug() . '/inbox'; ?>">
 				            <i class="fa fa-envelope-o"></i>
-				            <span class="badge bg-theme">5</span>
+				            <span class="badge bg-theme"><?php bp_total_unread_messages_count(); ?></span>
 				        </a>
 				        <ul class="dropdown-menu extended inbox">
 				            <div class="notify-arrow notify-arrow-green"></div>
@@ -192,9 +197,11 @@
 			    			$current_user = wp_get_current_user();
 			    			printf( "Hello, %s ", $current_user->user_firstname );
 			    			?>
-				    		<a href="profile.html">
-								<img src="<?php echo get_template_directory_uri(); ?>/img/ui-sam.jpg" class="img-circle" width="60">
-							</a>
+							<a href="<?php echo bp_loggedin_user_domain(); ?>" title="View Profile">
+			    			<?php
+			    			bp_loggedin_user_avatar();
+			    			?>
+			    			</a>
 						</span>
 					</li>
 		    	</ul>
